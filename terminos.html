@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title data-i18n="term_page_title">Términos del Servicio | MotoGroup</title>
+  <link rel="icon" type="image/png"
+    href="logo.png" />
+  <link rel="stylesheet" href="index.css" />
+  <style>
+    .legal-content {
+      padding: 120px 20px 60px;
+      max-width: 800px;
+      margin: 0 auto;
+      color: var(--on-surface);
+    }
+    .legal-content h1 {
+      font-size: 3rem;
+      margin-bottom: 2rem;
+      color: var(--on-bg);
+    }
+    .legal-content h2 {
+      font-size: 1.5rem;
+      margin-top: 2rem;
+      margin-bottom: 1rem;
+      color: var(--primary);
+    }
+    .legal-content p, .legal-content ul {
+      margin-bottom: 1rem;
+      line-height: 1.6;
+      color: var(--on-surface-variant);
+    }
+    .legal-content ul {
+      padding-left: 20px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- ===== Desktop Navbar ===== -->
+  <header class="navbar" id="navbar">
+    <div class="navbar__logo">
+      <a href="index.html" style="display:flex; align-items:center; text-decoration:none; color:inherit; gap:12px;">
+      <img alt="MotoGroup Logo"
+        src="logo.png" />
+      <span>MotoGroup</span>
+      </a>
+    </div>
+    <nav class="navbar__links">
+      <a href="index.html#features" data-i18n="nav_features">Features</a>
+      <a href="index.html#sos" data-i18n="nav_sos">SOS</a>
+      <a href="index.html#community" data-i18n="nav_community">Community</a>
+      <a href="index.html#plans" data-i18n="nav_plans">Plans</a>
+      <a href="index.html#support" data-i18n="nav_support">Support</a>
+    </nav>
+    <div style="display:flex; align-items:center;">
+      <a href="index.html" style="text-decoration:none;"><button class="navbar__cta" data-i18n="nav_back">Volver al Inicio</button></a>
+      <button class="lang-toggle" id="desktop-lang" style="background:none; border: 1px solid var(--primary); color: var(--primary); padding: 8px 12px; border-radius: 8px; cursor: pointer; font-family: var(--font-ui); font-weight: 600; margin-left: 12px; transition: all 0.3s ease;">
+        ES-ENG
+      </button>
+    </div>
+  </header>
+
+  <!-- ===== Mobile Navbar ===== -->
+  <header class="navbar-mobile">
+    <div class="navbar-mobile__logo">
+      <a href="index.html" style="display:flex; align-items:center; text-decoration:none; color:inherit; gap:12px;">
+      <img alt="Logo"
+        src="logo.png" />
+      <span>MotoGroup</span>
+      </a>
+    </div>
+    <div style="display:flex; align-items:center;">
+      <button class="lang-toggle" id="mobile-lang-top" style="background:none; border: 1px solid var(--primary); color: var(--primary); padding: 4px 8px; border-radius: 8px; cursor: pointer; font-family: var(--font-ui); font-weight: 600; margin-right: 12px; font-size: 14px; transition: all 0.3s ease;">
+        ENG
+      </button>
+      <button id="menu-open" style="background:none;border:none;color:var(--primary);font-size:28px;cursor:pointer;">
+        <span class="material-symbols-outlined" style="font-size:32px;">menu</span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile Menu Overlay -->
+  <div class="mobile-menu" id="mobile-menu">
+    <button class="mobile-menu__close" id="menu-close">
+      <span class="material-symbols-outlined">close</span>
+    </button>
+    <a href="index.html#features" class="mobile-link" data-i18n="nav_features">Features</a>
+    <a href="index.html#sos" class="mobile-link" data-i18n="nav_sos">SOS</a>
+    <a href="#community" class="mobile-link" data-i18n="nav_community">Community</a>
+    <a href="index.html#plans" class="mobile-link" data-i18n="nav_plans">Plans</a>
+    <a href="index.html#support" class="mobile-link" data-i18n="nav_support">Support</a>
+    <a href="index.html" style="text-decoration:none;"><button class="btn-primary" style="margin-top:16px;" data-i18n="nav_back">Volver al Inicio</button></a>
+  </div>
+
+  <main class="legal-content">
+    <h1 data-i18n="term_h1">Términos del Servicio</h1>
+    <p data-i18n="update_date">Última actualización: 27 de julio de 2026</p>
+
+    <p data-i18n="term_intro">Bienvenido a <strong>MotoGroup</strong>. Al descargar, instalar o utilizar nuestra aplicación y servicios relacionados, usted acepta estar sujeto a estos Términos del Servicio. Lea cuidadosamente antes de comenzar a rodar con nosotros.</p>
+
+    <h2 data-i18n="term_h2_1">1. Uso del Servicio y Seguridad Vial</h2>
+    <p data-i18n="term_p1">Nuestra prioridad es la seguridad en la ruta. Al usar MotoGroup, usted se compromete a:</p>
+    <ul>
+      <li data-i18n="term_li1_1">Respetar siempre las leyes de tránsito y normas de seguridad vial de su jurisdicción.</li>
+      <li data-i18n="term_li1_2">No interactuar con la aplicación de forma que distraiga su atención de la conducción. Las alertas y el mapa deben usarse como referencia pasiva o mientras el vehículo está detenido.</li>
+      <li data-i18n="term_li1_3">Entender que MotoGroup es una herramienta de asistencia. Usted es el único responsable de su seguridad y la de su vehículo.</li>
+    </ul>
+
+    <h2 data-i18n="term_h2_2">2. Funcionalidad de Alertas SOS y Sensor de Colisión</h2>
+    <p data-i18n="term_p2">El sistema de Alertas SOS y el Sensor de Colisión G-Force están diseñados para proporcionar ayuda rápida en caso de emergencia. Sin embargo:</p>
+    <ul>
+      <li data-i18n="term_li2_1">La efectividad de la alerta depende de la conectividad a la red móvil y del correcto funcionamiento de los sensores de su dispositivo.</li>
+      <li data-i18n="term_li2_2">No garantizamos que todas las caídas o impactos sean detectados.</li>
+      <li data-i18n="term_li2_3">La aplicación no sustituye a los servicios de emergencia oficiales (como el 911). Siempre contacte a las autoridades correspondientes en caso de un accidente grave.</li>
+    </ul>
+
+    <h2 data-i18n="term_h2_3">3. Planes de Suscripción</h2>
+    <p data-i18n="term_p3">MotoGroup ofrece un plan gratuito y un plan Premium. Al suscribirse a <strong>MotoGroup Premium</strong>, acepta los siguientes términos de pago:</p>
+    <ul>
+      <li data-i18n="term_li3_1">Las suscripciones se renuevan automáticamente (mensual o anualmente) a menos que se cancelen con al menos 24 horas de antelación al final del período actual.</li>
+      <li data-i18n="term_li3_2">El plan Premium desbloquea funciones avanzadas como el SOS automático (Crash Detect), mapas offline y telemetría avanzada.</li>
+      <li data-i18n="term_li3_3">No se ofrecen reembolsos parciales por períodos no utilizados, pero puede seguir usando las funciones Premium hasta el final del ciclo de facturación.</li>
+    </ul>
+
+    <h2 data-i18n="term_h2_4">4. Contenido del Usuario y Comunidad</h2>
+    <p data-i18n="term_p4">Nuestra plataforma permite la creación de Álbumes de Recuerdos y Puntos de Interés (POIs). Usted es responsable del contenido que sube. Nos reservamos el derecho de eliminar cualquier contenido que consideremos ofensivo, peligroso o que infrinja los derechos de terceros.</p>
+
+    <h2 data-i18n="term_h2_5">5. Limitación de Responsabilidad</h2>
+    <p data-i18n="term_p5">En la medida máxima permitida por la ley, MotoGroup y sus desarrolladores no serán responsables por ningún daño directo, indirecto, incidental o consecuente que resulte del uso o la incapacidad de usar nuestra aplicación, incluyendo accidentes de tráfico, fallas del hardware del teléfono, o pérdida de datos de telemetría y recuerdos grupales.</p>
+
+    <h2 data-i18n="term_h2_6">6. Cambios a los Términos</h2>
+    <p data-i18n="term_p6">Nos reservamos el derecho de modificar estos términos en cualquier momento. Le notificaremos de cualquier cambio significativo a través de la aplicación o por correo electrónico.</p>
+  </main>
+
+  <!-- ===== Footer ===== -->
+  <footer class="footer" id="legal">
+    <div class="footer__brand">
+      <img alt="MotoGroup"
+        src="logo.png" />
+      <div>
+        <div class="footer__brand-name">MotoGroup</div>
+        <div class="footer__brand-tagline" data-i18n="footer_tag">Precision Engineered for the Road.</div>
+      </div>
+    </div>
+    <div class="footer__right">
+      <div class="footer__links">
+        <a href="privacidad.html" data-i18n="foot_priv">Política de Privacidad</a>
+        <a href="terminos.html" data-i18n="foot_term">Términos de Servicio</a>
+        <a href="cookies.html" data-i18n="foot_cook">Política de Cookies</a>
+        <a href="#" data-i18n="foot_safe">Safety Guidelines</a>
+      </div>
+      <div class="footer__socials">
+        <a class="footer__social" href="#"><span class="material-symbols-outlined">share</span></a>
+        <a class="footer__social" href="#"><span class="material-symbols-outlined">groups</span></a>
+      </div>
+      <p class="footer__copy" data-i18n="foot_copy">© 2026 MotoGroup. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="lang.js"></script>
+  <script>
+    // Mobile menu
+    const menuOpen = document.getElementById('menu-open');
+    const menuClose = document.getElementById('menu-close');
+    const mobileMenu = document.getElementById('mobile-menu');
+    menuOpen?.addEventListener('click', () => mobileMenu.classList.add('open'));
+    menuClose?.addEventListener('click', () => mobileMenu.classList.remove('open'));
+    document.querySelectorAll('.mobile-link').forEach(a => {
+      a.addEventListener('click', () => mobileMenu.classList.remove('open'));
+    });
+  </script>
+</body>
+</html>

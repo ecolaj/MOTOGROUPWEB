@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title data-i18n="title">MotoGroup | Rodar acompañado, nunca solo</title>
+  <meta name="description" id="meta-desc"
+    content="MotoGroup: Rastreo GPS en vivo, telemetría de rodada, alertas de emergencia visibles para todos los integarntes de una rodada, álbumes de recuerdo grupales para volver a vivir las rodadas, muchas funciones más." />
+  <link rel="icon" type="image/png"
+    href="logo.png" />
+  <link rel="stylesheet" href="index.css" />
+</head>
+
+<body>
+
+  <!-- ===== Desktop Navbar ===== -->
+  <header class="navbar" id="navbar">
+    <div class="navbar__logo">
+      <img alt="MotoGroup Logo"
+        src="logo.png" />
+      <span>MotoGroup</span>
+    </div>
+    <nav class="navbar__links">
+      <a href="#features" data-i18n="nav_features">Features</a>
+      <a href="#sos" data-i18n="nav_sos">SOS</a>
+      <a href="#community" data-i18n="nav_community">Community</a>
+      <a href="#plans" data-i18n="nav_plans">Plans</a>
+      <a href="#support" data-i18n="nav_support">Support</a>
+      <a href="#legal" data-i18n="nav_legal">Legal</a>
+    </nav>
+    <div style="display:flex; align-items:center;">
+      <button class="navbar__cta" id="nav-download" data-i18n="nav_download">Download App</button>
+      <button class="lang-toggle" id="desktop-lang" style="background:none; border: 1px solid var(--primary); color: var(--primary); padding: 8px 12px; border-radius: 8px; cursor: pointer; font-family: var(--font-ui); font-weight: 600; margin-left: 12px; transition: all 0.3s ease;">
+        ES-ENG
+      </button>
+    </div>
+  </header>
+
+  <!-- ===== Mobile Navbar ===== -->
+  <header class="navbar-mobile">
+    <div class="navbar-mobile__logo">
+      <img alt="Logo"
+        src="logo.png" />
+      <span>MotoGroup</span>
+    </div>
+    <div style="display:flex; align-items:center;">
+      <button class="lang-toggle" id="mobile-lang-top" style="background:none; border: 1px solid var(--primary); color: var(--primary); padding: 4px 8px; border-radius: 8px; cursor: pointer; font-family: var(--font-ui); font-weight: 600; margin-right: 12px; font-size: 14px; transition: all 0.3s ease;">
+        ENG
+      </button>
+      <button id="menu-open" style="background:none;border:none;color:var(--primary);font-size:28px;cursor:pointer;">
+        <span class="material-symbols-outlined" style="font-size:32px;">menu</span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile Menu Overlay -->
+  <div class="mobile-menu" id="mobile-menu">
+    <button class="mobile-menu__close" id="menu-close">
+      <span class="material-symbols-outlined">close</span>
+    </button>
+    <a href="#features" class="mobile-link" data-i18n="nav_features">Features</a>
+    <a href="#sos" class="mobile-link" data-i18n="nav_sos">SOS</a>
+    <a href="#community" class="mobile-link" data-i18n="nav_community">Community</a>
+    <a href="#plans" class="mobile-link" data-i18n="nav_plans">Plans</a>
+    <a href="#support" class="mobile-link" data-i18n="nav_support">Support</a>
+    <a href="#legal" class="mobile-link" data-i18n="nav_legal">Legal</a>
+    <button class="btn-primary" style="margin-top:16px;" data-i18n="nav_download">Download App</button>
+  </div>
+
+  <!-- ===== Hero Section ===== -->
+  <section class="hero container" id="hero">
+    <div class="hero__content">
+      <div class="hero__badge">
+        <span class="hero__badge-dot"></span>
+        <span class="hero__badge-text label-sm" data-i18n="hero_badge">Live Now: 1,242 Bikers Online</span>
+      </div>
+      <h1 data-i18n="hero_title">Rodar acompañado, <span class="accent">nunca solo.</span></h1>
+      <p class="hero__desc" data-i18n="hero_desc">Rastreo GPS en vivo, telemetría de rodada, alertas de emergencia visibles para todos los
+        integarntes de una rodada, álbumes de recuerdo grupales para volver a vivir las rodadas, muchas funciones más.
+      </p>
+      <div class="hero__buttons">
+        <a href="#" class="btn-primary" style="display:flex; align-items:center; gap:12px; text-decoration:none; padding: 10px 24px; text-align: left;">
+          <svg viewBox="0 0 384 512" width="28" height="28" fill="currentColor"><path d="M318.7 268.7c-.2-36.7 16.4-64.4 50-84.8-18.8-26.9-47.2-41.7-84.7-44.6-35.5-2.8-74.3 20.7-88.5 20.7-15 0-49.4-19.7-76.4-19.7C63.3 141.2 4 184.8 4 273.5q0 39.3 14.4 81.2c12.8 36.7 59 126.7 107.2 125.2 25.2-.6 43-17.9 75.8-17.9 31.8 0 48.3 17.9 76.4 17.9 48.6-.7 90.4-82.5 102.6-119.3-65.2-30.7-61.7-90-61.7-91.9zm-56.6-164.2c27.3-32.4 24.8-61.9 24-72.5-24.1 1.4-52 16.4-67.9 34.9-17.5 19.8-27.8 44.3-25.6 71.9 26.1 2 49.9-11.4 69.5-34.3z"/></svg>
+          <div style="display:flex; flex-direction:column; line-height:1.1;">
+            <span style="font-size:0.65em; font-weight:normal; letter-spacing: 0.5px;" data-i18n="app_store_get">Consíguelo en el</span>
+            <span style="font-size:1.2em; font-weight:bold;">App Store</span>
+          </div>
+        </a>
+        <a href="#" class="btn-primary" style="display:flex; align-items:center; gap:12px; text-decoration:none; padding: 10px 24px; text-align: left;">
+          <svg viewBox="0 0 512 512" width="28" height="28" fill="currentColor"><path d="M325.3 234.3L104.6 13l280.8 161.2-60.1 60.1zM47 0C34 6.8 25.3 19.2 25.3 35.3v441.3c0 16.1 8.7 28.5 21.7 35.3l256.6-256L47 0zm425.2 225.6l-58.9-34.1-65.7 64.5 65.7 64.5 60.1-34.1c18-14.3 18-46.5-1.2-60.8zM104.6 499l280.8-161.2-60.1-60.1L104.6 499z"/></svg>
+          <div style="display:flex; flex-direction:column; line-height:1.1;">
+            <span style="font-size:0.65em; font-weight:normal; letter-spacing: 0.5px;" data-i18n="google_play_get">DISPONIBLE EN</span>
+            <span style="font-size:1.2em; font-weight:bold;">Google Play</span>
+          </div>
+        </a>
+      </div>
+      <div class="hero__partners">
+        <span class="label-sm" data-i18n="hero_partners">COMODIDAD PARA:</span>
+        <span class="material-symbols-outlined">motorcycle</span>
+        <span class="material-symbols-outlined" style="font-variation-settings:'FILL' 1">speed</span>
+        <span class="material-symbols-outlined">group</span>
+      </div>
+    </div>
+    <div class="hero__phone-wrap">
+      <div class="hero__phone-glow"></div>
+      <div class="hero__phone">
+        <img src="app-mockup.png" alt="MotoGroup App Interface" class="hero__phone-img" />
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Features Bento Grid ===== -->
+  <section class="features container" id="features">
+    <div class="features__header">
+      <h2 class="section-title" data-i18n="features_title">Tecnología de Vanguardia</h2>
+      <p class="section-sub" data-i18n="features_sub">Diseñado para la precisión en el asfalto. Cada módulo está optimizado para darte control absoluto.</p>
+    </div>
+    <div class="bento">
+      <!-- GPS -->
+      <div class="bento__card bento__card--wide glass reveal">
+        <div>
+          <span class="material-symbols-outlined">location_on</span>
+          <h3 data-i18n="feat_gps_title">Tracking GPS en Grupo</h3>
+          <p data-i18n="feat_gps_desc">Visualiza a todos tus compañeros en tiempo real con un mapa optimizado para alta velocidad y baja latencia.</p>
+        </div>
+        <div class="bento__map-preview">
+          <img
+            src="https://lh3.googleusercontent.com/aida-public/AB6AXuAY1EGbvC2mB09FBupEerXqFRX-hwevJ_yVYQwvsteghG4n2iVo9CBskN__Yz8U9h9-1A_3uFD0bPlWjgiBjOSR7uOgOPNGvEJpNR_vtlruNHSawjUqvYh4bWapQWma_RkAyDYh44bY_gX7ssViaIowSlnX31g0QA0_lGpMVtMHedR0azYrojQy-1A3vPsqxsmkFy_nq5eEZyUqOhC0Ic546UwiX7n1N33ckaBTsyFbjfsXznC_-WGS"
+            alt="Map Preview" />
+        </div>
+      </div>
+      <!-- SOS -->
+      <div class="bento__card bento__card--sos glass reveal">
+        <div>
+          <span class="material-symbols-outlined">health_and_safety</span>
+          <h3 data-i18n="feat_sos_title">Alertas SOS</h3>
+          <p data-i18n="feat_sos_desc">Alertas de un toque, para marcar mensajes en la ruta, visibles para todos los integrantes de una rodada.</p>
+        </div>
+        <div class="sos-pulse"><span></span> <span data-i18n="sos_pulse">Monitoreo Activo</span></div>
+      </div>
+      <!-- POIs -->
+      <div class="bento__card glass reveal">
+        <span class="material-symbols-outlined">map</span>
+        <h3 data-i18n="feat_poi_title">Puntos de Interés</h3>
+        <p data-i18n="feat_poi_desc">Diferentes modalidades de visualización de tu posición y la de los integrantes en una rodada activa.</p>
+      </div>
+      <!-- Album -->
+      <div class="bento__card glass reveal">
+        <span class="material-symbols-outlined">photo_album</span>
+        <h3 data-i18n="feat_album_title">Recuerdos</h3>
+        <p data-i18n="feat_album_desc">Albumes de recuerdos con mucha, mucha, mucha información de una rodada. Fotografias individuales y de los integrantes de una rodada, para que vuelvas a vivir esos momentos.</p>
+      </div>
+      <!-- Gamification -->
+      <div class="bento__card bento__card--wide glass reveal">
+        <div class="bento__gamification">
+          <div style="flex:1">
+            <span class="material-symbols-outlined">military_tech</span>
+            <h3 data-i18n="feat_gam_title">Gamificación</h3>
+            <p data-i18n="feat_gam_desc">Recorre carreteras, acumula kilómetros en tus viajes y desbloquea equipo legendario. Cada rodada suma kilómetros para desbloquear tus logros.</p>
+          </div>
+          <div class="bento__gamification-badge">
+            <div class="bento__gamification-badge-circle">
+              <span class="material-symbols-outlined" style="color:var(--primary)">stars</span>
+            </div>
+            <span class="label-sm" style="font-family:var(--font-data)" data-i18n="gam_badge">DIAMANTE</span>
+          </div>
+        </div>
+      </div>
+      <!-- Offline -->
+      <div class="bento__card glass reveal">
+        <span class="material-symbols-outlined">wifi_off</span>
+        <h3 data-i18n="feat_off_title">Soporte Offline</h3>
+        <p data-i18n="feat_off_desc">Optimizado para funcionar incluso si tu conexión falla en esos lugares donde la señal no es muy buena.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SOS Security Section ===== -->
+  <section class="sos-section" id="sos">
+    <div class="container">
+      <div class="reveal">
+        <div class="sos__label">
+          <div class="sos__label-line"></div>
+          <span class="label-sm" style="color:var(--primary);letter-spacing:0.3em;" data-i18n="sos_label">Protocolo de Seguridad</span>
+        </div>
+        <h2 class="section-title" style="margin-bottom:32px;" data-i18n="sos_title">Seguridad sin Concesiones.</h2>
+        <div class="sos__features">
+          <div class="sos__feature">
+            <div class="sos__feature-icon sos__feature-icon--red">
+              <span class="material-symbols-outlined">sensors</span>
+            </div>
+            <div>
+              <h4 data-i18n="sos_f1_title">Sensor de Colisión G-Force</h4>
+              <p data-i18n="sos_f1_desc">Algoritmo inteligente que detecta desaceleraciones bruscas e impactos, activando una cuenta regresiva de 30 segundos antes de alertar.</p>
+            </div>
+          </div>
+          <div class="sos__feature">
+            <div class="sos__feature-icon sos__feature-icon--orange">
+              <span class="material-symbols-outlined">share_location</span>
+            </div>
+            <div>
+              <h4 data-i18n="sos_f2_title">Difusión en Tiempo Real</h4>
+              <p data-i18n="sos_f2_desc">En caso de emergencia, una alerta se envía a todos los integrantes de una rodada.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="sos__sim glass reveal">
+        <div class="sos__sim-header">
+          <div class="sos__sim-icon">
+            <span class="material-symbols-outlined">emergency_home</span>
+          </div>
+          <h3 data-i18n="sim_title">Simulación de Alerta</h3>
+          <p class="sim-sub" data-i18n="sim_sub">Si no cancelas en <span id="sos-timer">00:30</span>, se enviará señal SOS.</p>
+        </div>
+        <div class="sos__sim-rows">
+          <div class="sos__sim-row sos__sim-row--alert">
+            <span style="font-weight:700;" data-i18n="sim_sending">Enviando Alerta...</span>
+            <span class="sim-status" data-i18n="sim_status">PENDIENTE</span>
+          </div>
+          <div class="sos__sim-row sos__sim-row--info">
+            <span class="sim-label" data-i18n="sim_loc_label">Ubicación Actual</span>
+            <span class="sim-value">40.4168° N, 3.7038° W</span>
+          </div>
+        </div>
+        <button class="sos__sim-cancel" id="sos-cancel" data-i18n="sim_btn">CANCELAR ALERTA</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Plans Section ===== -->
+  <section class="plans container" id="plans">
+    <div class="plans__header">
+      <h2 class="section-title" data-i18n="plans_title">Elige tu nivel de rodada</h2>
+      <div class="plans__toggle">
+        <button class="active" id="toggle-monthly" data-i18n="plan_monthly">Mensual</button>
+        <button id="toggle-annual" data-i18n="plan_annual">Anual (-50%)</button>
+      </div>
+    </div>
+    <div class="plans__grid">
+      <!-- Free -->
+      <div class="plan-card glass reveal">
+        <h3>MotoGroup Free</h3>
+        <div class="plan-card__price">
+          <span class="amount">US$ 0</span><span class="period" data-i18n="plan_period_forever">/siempre</span>
+        </div>
+        <p class="plan-card__desc" data-i18n="plan_free_desc">Para rodadas casuales y grupos pequeños de hasta 3 integrantes.</p>
+        <ul class="plan-card__features">
+          <li><span class="material-symbols-outlined">check_circle</span> <span data-i18n="pf_1">Tracking GPS (3 Motos)</span></li>
+          <li><span class="material-symbols-outlined">check_circle</span> <span data-i18n="pf_2">Alertas SOS Manuales</span></li>
+          <li class="disabled"><span class="material-symbols-outlined">cancel</span> <span data-i18n="pf_3">Detección de Caída Automática</span></li>
+          <li class="disabled"><span class="material-symbols-outlined">cancel</span> <span data-i18n="pf_4">Telemetría Premium</span></li>
+        </ul>
+        <button class="btn-outline" style="width:100%" data-i18n="btn_free">EMPEZAR GRATIS</button>
+      </div>
+      <!-- Premium -->
+      <div class="plan-card plan-card--premium glass reveal">
+        <div class="plan-card__badge" data-i18n="plan_prem_badge">RECOMENDADO</div>
+        <h3>MotoGroup Premium</h3>
+        <div class="plan-card__price">
+          <span class="amount" id="price-amount">US$ 9.99</span><span class="period" id="price-period" data-i18n="plan_period_month">/mes</span>
+        </div>
+        <p class="plan-card__desc" data-i18n="plan_prem_desc">La experiencia total de seguridad y comunidad sin límites.</p>
+        <ul class="plan-card__features">
+          <li><span class="material-symbols-outlined">check_circle</span> <span data-i18n="pp_1">Tracking Ilimitado (Groups 50+)</span></li>
+          <li><span class="material-symbols-outlined">check_circle</span> <span data-i18n="pp_2">SOS Automático (Crash Detect)</span></li>
+          <li><span class="material-symbols-outlined">check_circle</span> <span data-i18n="pp_3">Mapas Offline de todo el mundo</span></li>
+          <li><span class="material-symbols-outlined">check_circle</span> <span data-i18n="pp_4">Telemetría Avanzada (RPM/Incline)</span></li>
+        </ul>
+        <button class="btn-primary" style="width:100%" data-i18n="btn_prem">UNIRSE AL CLUB</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Contact Section ===== -->
+  <section class="contact container" id="support">
+    <div class="contact__card glass reveal">
+      <div class="contact__info">
+        <div>
+          <h2 data-i18n="contact_title">Contacto Técnico</h2>
+          <p data-i18n="contact_desc">¿Necesitas ayuda con el registro de tu Club o tienes dudas técnicas? Nuestro equipo de ingenieros está listo.</p>
+        </div>
+        <div class="contact__info-links">
+          <div><span class="material-symbols-outlined">mail</span><span>support@motogroup.net</span></div>
+          <div><span class="material-symbols-outlined">forum</span><span>Discord Community</span></div>
+        </div>
+      </div>
+      <div class="contact__form">
+        <form id="contact-form">
+          <div>
+            <label for="contact-name" data-i18n="form_name">Nombre</label>
+            <input type="text" id="contact-name" data-i18n-placeholder="form_name" placeholder="Tu nombre" />
+          </div>
+          <div>
+            <label for="contact-email" data-i18n="form_email">Email</label>
+            <input type="email" id="contact-email" placeholder="email@moto.com" />
+          </div>
+          <div class="full">
+            <label for="contact-type" data-i18n="form_type">Tipo de Consulta</label>
+            <select id="contact-type" style="background:var(--bg);color:var(--on-surface);">
+              <option style="background:var(--bg);color:var(--on-surface);" data-i18n="ft_1">Soporte Técnico</option>
+              <option style="background:var(--bg);color:var(--on-surface);" data-i18n="ft_2">Registro de Club / Grupo</option>
+              <option style="background:var(--bg);color:var(--on-surface);" data-i18n="ft_3">Ventas Premium Corporativas</option>
+              <option style="background:var(--bg);color:var(--on-surface);" data-i18n="ft_4">Reportar un fallo</option>
+            </select>
+          </div>
+          <div class="full">
+            <label for="contact-message" data-i18n="form_msg">Mensaje</label>
+            <textarea id="contact-message" placeholder="..."></textarea>
+          </div>
+          <div class="form-actions">
+            <button type="submit" class="btn-primary" data-i18n="form_btn">ENVIAR MENSAJE</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Footer ===== -->
+  <footer class="footer" id="legal">
+    <div class="footer__brand">
+      <img alt="MotoGroup"
+        src="logo.png" />
+      <div>
+        <div class="footer__brand-name">MotoGroup</div>
+        <div class="footer__brand-tagline" data-i18n="footer_tag">Precision Engineered for the Road.</div>
+      </div>
+    </div>
+    <div class="footer__right">
+      <div class="footer__links">
+        <a href="privacidad.html" data-i18n="foot_priv">Política de Privacidad</a>
+        <a href="terminos.html" data-i18n="foot_term">Términos de Servicio</a>
+        <a href="cookies.html" data-i18n="foot_cook">Política de Cookies</a>
+        <a href="#" data-i18n="foot_safe">Safety Guidelines</a>
+      </div>
+      <div class="footer__socials">
+        <a class="footer__social" href="#"><span class="material-symbols-outlined">share</span></a>
+        <a class="footer__social" href="#"><span class="material-symbols-outlined">groups</span></a>
+      </div>
+      <p class="footer__copy" data-i18n="foot_copy">© 2026 MotoGroup. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="lang.js"></script>
+  <script>
+    // Mobile menu
+    const menuOpen = document.getElementById('menu-open');
+    const menuClose = document.getElementById('menu-close');
+    const mobileMenu = document.getElementById('mobile-menu');
+    menuOpen?.addEventListener('click', () => mobileMenu.classList.add('open'));
+    menuClose?.addEventListener('click', () => mobileMenu.classList.remove('open'));
+    document.querySelectorAll('.mobile-link').forEach(a => {
+      a.addEventListener('click', () => mobileMenu.classList.remove('open'));
+    });
+
+    // Reveal on scroll
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+    }, { threshold: 0.1 });
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+    // Plans toggle
+    let isAnnual = false;
+    const btnMonthly = document.getElementById('toggle-monthly');
+    const btnAnnual = document.getElementById('toggle-annual');
+    const priceAmount = document.getElementById('price-amount');
+    const pricePeriod = document.getElementById('price-period');
+    
+    function updatePricingPeriod() {
+      if(pricePeriod) {
+        pricePeriod.textContent = isAnnual ? translations[currentLang].plan_period_year : translations[currentLang].plan_period_month;
+      }
+    }
+
+    btnMonthly?.addEventListener('click', () => {
+      isAnnual = false;
+      btnMonthly.classList.add('active'); btnAnnual.classList.remove('active');
+      priceAmount.textContent = 'US$ 9.99'; 
+      updatePricingPeriod();
+    });
+    btnAnnual?.addEventListener('click', () => {
+      isAnnual = true;
+      btnAnnual.classList.add('active'); btnMonthly.classList.remove('active');
+      priceAmount.textContent = 'US$ 59.99'; 
+      updatePricingPeriod();
+    });
+
+    // SOS timer simulation
+    let sosSeconds = 30;
+    const sosTimer = document.getElementById('sos-timer');
+    const sosCancel = document.getElementById('sos-cancel');
+    let sosInterval = null;
+    const startSosTimer = () => {
+      if (sosInterval) return;
+      sosInterval = setInterval(() => {
+        sosSeconds--;
+        if (sosSeconds < 0) { sosSeconds = 0; clearInterval(sosInterval); sosInterval = null; }
+        const timerDisplay = document.getElementById('sos-timer');
+        if(timerDisplay) timerDisplay.textContent = '00:' + String(sosSeconds).padStart(2, '0');
+      }, 1000);
+    };
+    // Start when section is visible
+    const sosObserver = new IntersectionObserver((entries) => {
+      entries.forEach(e => { if (e.isIntersecting) startSosTimer(); });
+    }, { threshold: 0.3 });
+    const sosSection = document.getElementById('sos');
+    if (sosSection) sosObserver.observe(sosSection);
+    sosCancel?.addEventListener('click', () => {
+      clearInterval(sosInterval); sosInterval = null; sosSeconds = 30;
+      const timerDisplay = document.getElementById('sos-timer');
+      if(timerDisplay) timerDisplay.textContent = '00:30';
+    });
+
+    // Parallax on hero phone
+    window.addEventListener('mousemove', (e) => {
+      const phone = document.querySelector('.hero__phone');
+      if (!phone || window.innerWidth < 900) return;
+      const mx = (e.clientX - window.innerWidth / 2) / 60;
+      const my = (e.clientY - window.innerHeight / 2) / 60;
+      phone.style.transform = `rotate(6deg) translate(${mx}px, ${my}px)`;
+    });
+
+    // Contact form
+    document.getElementById('contact-form')?.addEventListener('submit', (e) => {
+      e.preventDefault();
+      alert(currentLang === 'es' ? '¡Mensaje enviado! Nos pondremos en contacto contigo pronto.' : 'Message sent! We will contact you soon.');
+    });
+  </script>
+</body>
+</html>

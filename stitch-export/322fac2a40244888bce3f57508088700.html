@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>MotoGroup | Rodar acompañado, nunca solo</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Anybody:wght@400;600;700;800&amp;family=Hanken+Grotesk:wght@400;500;700&amp;family=Geist:wght@400;500;600&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Anybody:wght@100..900&amp;family=Geist:wght@100..900&amp;family=Hanken+Grotesk:wght@100..900&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "tertiary": "#c8c6c7",
+                        "surface-container-low": "#0d1c2d",
+                        "on-tertiary-container": "#333233",
+                        "primary-fixed-dim": "#ffb690",
+                        "inverse-primary": "#9d4300",
+                        "inverse-surface": "#d4e4fa",
+                        "outline-variant": "#584237",
+                        "on-secondary-container": "#b7b4b7",
+                        "surface-container-high": "#1c2b3c",
+                        "tertiary-container": "#9c9a9b",
+                        "error-container": "#93000a",
+                        "on-background": "#d4e4fa",
+                        "inverse-on-surface": "#233143",
+                        "secondary-container": "#474649",
+                        "on-error-container": "#ffdad6",
+                        "surface-bright": "#2c3a4c",
+                        "on-secondary-fixed-variant": "#474649",
+                        "tertiary-fixed": "#e5e2e3",
+                        "surface": "#051424",
+                        "on-tertiary-fixed": "#1c1b1d",
+                        "on-surface-variant": "#e0c0b1",
+                        "primary": "#f97316",
+                        "secondary": "#c8c6c8",
+                        "surface-tint": "#ffb690",
+                        "on-primary-fixed": "#341100",
+                        "on-primary-container": "#582200",
+                        "outline": "#a78b7d",
+                        "on-primary-fixed-variant": "#783200",
+                        "surface-container": "#122131",
+                        "primary-fixed": "#ffdbca",
+                        "on-error": "#690005",
+                        "on-secondary-fixed": "#1b1b1d",
+                        "surface-container-highest": "#273647",
+                        "secondary-fixed": "#e5e1e4",
+                        "on-surface": "#d4e4fa",
+                        "surface-variant": "#273647",
+                        "surface-container-lowest": "#010f1f",
+                        "secondary-fixed-dim": "#c8c6c8",
+                        "on-secondary": "#313032",
+                        "on-primary": "#552100",
+                        "on-tertiary": "#313031",
+                        "primary-container": "#f97316",
+                        "surface-dim": "#051424",
+                        "error": "#ffb4ab",
+                        "on-tertiary-fixed-variant": "#474648",
+                        "tertiary-fixed-dim": "#c8c6c7",
+                        "background": "#080809"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "margin-desktop": "64px",
+                        "margin-mobile": "20px",
+                        "gutter": "24px",
+                        "unit": "4px",
+                        "container-max": "1440px"
+                    },
+                    "fontFamily": {
+                        "headline-lg": ["Anybody"],
+                        "body-md": ["Hanken Grotesk"],
+                        "telemetry-data": ["Geist"],
+                        "headline-lg-mobile": ["Anybody"],
+                        "headline-md": ["Anybody"],
+                        "display-lg": ["Anybody"],
+                        "body-lg": ["Hanken Grotesk"],
+                        "label-sm": ["Geist"]
+                    },
+                    "fontSize": {
+                        "headline-lg": ["48px", {"lineHeight": "52px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                        "telemetry-data": ["14px", {"lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                        "headline-lg-mobile": ["32px", {"lineHeight": "36px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "headline-md": ["24px", {"lineHeight": "32px", "letterSpacing": "0em", "fontWeight": "600"}],
+                        "display-lg": ["72px", {"lineHeight": "76px", "letterSpacing": "-0.04em", "fontWeight": "800"}],
+                        "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                        "label-sm": ["12px", {"lineHeight": "16px", "letterSpacing": "0.1em", "fontWeight": "600"}]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        body { background-color: #080809; color: #d4e4fa; }
+        .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+        .glass-card { background: rgba(12, 12, 14, 0.7); backdrop-filter: blur(12px); border: 1px solid #1A1A1E; }
+        .telemetry-gradient { background: linear-gradient(90deg, #F97316 0%, #FF5500 100%); }
+        .hero-glow { box-shadow: 0 0 40px -10px rgba(249, 115, 22, 0.3); }
+        .nav-blur { background: rgba(200, 198, 200, 0.05); backdrop-filter: blur(20px); }
+        ::-webkit-scrollbar { width: 4px; }
+        ::-webkit-scrollbar-track { background: #080809; }
+        ::-webkit-scrollbar-thumb { background: #1A1A1E; border-radius: 2px; }
+        ::-webkit-scrollbar-thumb:hover { background: #F97316; }
+    </style>
+</head>
+<body class="font-body-md overflow-x-hidden selection:bg-primary selection:text-background">
+<!-- TopNavBar -->
+<header class="fixed top-0 left-0 right-0 z-50 flex justify-between items-center px-margin-desktop py-4 bg-secondary/70 backdrop-blur-xl rounded-full mt-6 mx-auto max-w-container-max border border-outline-variant/30 shadow-lg md:flex hidden">
+<div class="flex items-center gap-2">
+<img alt="MotoGroup Logo" class="h-10 w-auto" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBnlc3LTNz5-cCbTbwdR5ZwRi54xZgoWvNcj0m7PPJEeeYsfdUw9pr8Wso_IcneS5e-hRgNV6UT0QGI1tpzlJyQ2DbGcyx2u-wwRQy7jyIzvDA9oxCHhN4qB82ME6WjmvFh3511w6ftfaW3YCYTbti_W7lUcumvmqJxAFKUcJLhH9rDoxim3wz68rjQdnBtk_mipdRhnX-WlSaXU8R-AU1PyZcPogQshQQqjY95wqVyXIOfGHwR6aIS"/>
+<span class="font-headline-md text-headline-md font-bold text-primary">MotoGroup</span>
+</div>
+<nav class="flex gap-8">
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors" href="#features">Features</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors" href="#sos">SOS</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors" href="#community">Community</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors" href="#plans">Plans</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors" href="#support">Support</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors" href="#legal">Legal</a>
+</nav>
+<button class="bg-primary text-background px-6 py-2 rounded-full font-bold hover:scale-95 transition-transform active:scale-90">
+            Download App
+        </button>
+</header>
+<!-- Mobile Nav Placeholder (For consistency) -->
+<header class="md:hidden flex justify-between items-center px-margin-mobile py-4 sticky top-0 bg-background/80 backdrop-blur-lg border-b border-outline-variant/20 z-50">
+<div class="flex items-center gap-2">
+<img alt="Logo" class="h-8 w-auto" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBnlc3LTNz5-cCbTbwdR5ZwRi54xZgoWvNcj0m7PPJEeeYsfdUw9pr8Wso_IcneS5e-hRgNV6UT0QGI1tpzlJyQ2DbGcyx2u-wwRQy7jyIzvDA9oxCHhN4qB82ME6WjmvFh3511w6ftfaW3YCYTbti_W7lUcumvmqJxAFKUcJLhH9rDoxim3wz68rjQdnBtk_mipdRhnX-WlSaXU8R-AU1PyZcPogQshQQqjY95wqVyXIOfGHwR6aIS"/>
+<span class="font-headline-md text-headline-md font-bold text-primary">MotoGroup</span>
+</div>
+<span class="material-symbols-outlined text-primary text-3xl">menu</span>
+</header>
+<!-- Hero Section -->
+<section class="relative pt-32 pb-20 px-margin-desktop max-w-container-max mx-auto grid md:grid-cols-2 gap-12 items-center min-h-[90vh]">
+<div class="z-10">
+<div class="inline-flex items-center gap-2 px-3 py-1 bg-surface-container rounded-full border border-outline-variant/30 mb-6">
+<span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-primary">Live Now: 1,242 Bikers Online</span>
+</div>
+<h1 class="font-display-lg text-display-lg mb-6 leading-[1.1]">
+                Rodar acompañado, <span class="text-primary italic">nunca solo.</span>
+</h1>
+<p class="font-body-lg text-body-lg text-secondary/80 max-w-lg mb-10">
+                Rastreo GPS en vivo, telemetría de rodada, alertas de emergencia visibles para todos los integarntes de una rodada, álbumes de recuerdo grupales para volver a vivir las rodadas, muchas funciones más.
+            </p>
+<div class="flex flex-wrap gap-4">
+<button class="bg-primary text-background px-8 py-4 rounded-lg font-headline-md text-headline-md flex items-center gap-3 hover:shadow-[0_0_20px_rgba(249,115,22,0.4)] transition-all">
+<span class="material-symbols-outlined">download</span>
+                    Descargar App
+                </button>
+<button class="border border-outline px-8 py-4 rounded-lg font-headline-md text-headline-md text-on-surface hover:bg-on-surface/5 transition-all">
+                    Ver demo en vivo
+                </button>
+</div>
+<div class="mt-12 flex gap-8 items-center opacity-60 grayscale hover:grayscale-0 transition-all">
+<span class="font-label-sm text-label-sm">COMODIDAD PARA:</span>
+<span class="material-symbols-outlined text-4xl">motorcycle</span>
+<span class="material-symbols-outlined text-4xl" style="font-variation-settings: 'FILL' 1">speed</span>
+<span class="material-symbols-outlined text-4xl">group</span>
+</div>
+</div>
+<div class="relative flex justify-center items-center">
+<div class="absolute inset-0 bg-primary/10 blur-[120px] rounded-full"></div>
+<div class="relative z-10 glass-card p-4 rounded-[3rem] border-white/10 shadow-2xl rotate-6 transform hover:rotate-0 transition-transform duration-700">
+<div class="bg-[#0c0c0e] rounded-[2.5rem] overflow-hidden w-[320px] h-[640px] relative border border-white/5">
+<!-- App UI Simulator -->
+<div class="p-6">
+<div class="flex justify-between items-center mb-6">
+<span class="material-symbols-outlined">menu</span>
+<span class="font-bold text-sm tracking-widest">MOTOGROUP</span>
+<span class="material-symbols-outlined">notifications</span>
+</div>
+<div class="h-80 w-full rounded-2xl mb-6 overflow-hidden relative border border-outline-variant/30">
+<div class="absolute inset-0 bg-surface-container" data-alt="A detailed digital 3D map interface showing a GPS route on a dark obsidian background with glowing electric orange markers and telemetry lines. The map features minimalist topography and three biker icons moving in sync along a winding road. High-tech, dark mode aesthetic with vibrant orange accents." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuC33cOD8iGTKsJGOd0wHHWRF8dSjwvJPDQj0iQ6myVj6s4d2dLTCSplaGc9uzaQm14VX2vbhXSOcXxla1RO_FIhFHJ8leXi7DiVNNrBmo5unMyAMk2Sfgs6PUw5hhMRbRMY8LGdIAOO6AfF8MmwuI_d5EdIavPXwTbe2D9THSZkJn93froe-4qJq-FesPGZGSrbrktS1xdxPtKKLMcxX47CT1-uWOPYRNKU5-KCN0Ycx3eZ5fiHksPo')"></div>
+<div class="absolute bottom-4 left-4 right-4 glass-card p-3 rounded-xl">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-primary flex items-center justify-center text-background font-bold text-xs">JR</div>
+<div>
+<div class="text-[10px] font-bold uppercase opacity-60">Líder de Rodada</div>
+<div class="text-xs font-bold text-primary">Jorge R. • En Marcha</div>
+</div>
+</div>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-4">
+<div class="glass-card p-4 rounded-xl">
+<div class="text-[10px] uppercase opacity-50 mb-1">Velocidad</div>
+<div class="font-telemetry-data text-xl text-primary">104 KM/H</div>
+</div>
+<div class="glass-card p-4 rounded-xl">
+<div class="text-[10px] uppercase opacity-50 mb-1">Batería</div>
+<div class="font-telemetry-data text-xl text-primary">88%</div>
+</div>
+</div>
+<button class="w-full mt-6 bg-error-container text-white py-3 rounded-xl font-bold flex items-center justify-center gap-2">
+<span class="material-symbols-outlined">emergency</span>
+                            PÁNICO SOS
+                        </button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Bento Grid Features -->
+<section class="py-24 px-margin-desktop max-w-container-max mx-auto" id="features">
+<div class="mb-16 text-center">
+<h2 class="font-headline-lg text-headline-lg mb-4">Tecnología de Vanguardia</h2>
+<p class="text-secondary/60 max-w-2xl mx-auto">Diseñado para la precisión en el asfalto. Cada módulo está optimizado para darte control absoluto.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-4 grid-rows-2 gap-gutter h-auto md:h-[800px]">
+<!-- GPS Tracking -->
+<div class="md:col-span-2 glass-card p-8 rounded-2xl flex flex-col justify-between group hover:border-primary/50 transition-all">
+<div>
+<span class="material-symbols-outlined text-primary text-4xl mb-6">location_on</span>
+<h3 class="font-headline-md text-headline-md mb-2">Tracking GPS en Grupo</h3>
+<p class="text-secondary/60">Visualiza a todos tus compañeros en tiempo real con un mapa optimizado para alta velocidad y baja latencia.</p>
+</div>
+<div class="mt-8 h-40 rounded-xl overflow-hidden bg-surface-container relative">
+<div class="absolute inset-0 opacity-40 group-hover:scale-110 transition-transform duration-1000" data-alt="A wide-angle, high-contrast digital map showing a sprawling urban network of roads at night in deep grays and blacks. Glowing electric orange lines represent active biker routes connecting various points of interest. The aesthetic is clean, technological, and luxury dark mode." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAY1EGbvC2mB09FBupEerXqFRX-hwevJ_yVYQwvsteghG4n2iVo9CBskN__Yz8U9h9-1A_3uFD0bPlWjgiBjOSR7uOgOPNGvEJpNR_vtlruNHSawjUqvYh4bWapQWma_RkAyDYh44bY_gX7ssViaIowSlnX31g0QA0_lGpMVtMHedR0azYrojQy-1A3vPsqxsmkFy_nq5eEZyUqOhC0Ic546UwiX7n1N33ckaBTsyFbjfsXznC_-WGS')"></div>
+</div>
+</div>
+<!-- SOS Alert -->
+<div class="glass-card p-8 rounded-2xl flex flex-col justify-between border-error/20 hover:bg-error-container/5 transition-all">
+<div>
+<span class="material-symbols-outlined text-error text-4xl mb-6">health_and_safety</span>
+<h3 class="font-headline-md text-headline-md mb-2 text-error">Alertas SOS</h3>
+<p class="text-secondary/60 text-sm">Alertas de un toque, para marcar mensajes en la ruta, visibles para todos los integrantes de una rodada.</p>
+</div>
+<div class="mt-4 flex items-center gap-2 text-error font-bold uppercase text-[10px] tracking-widest animate-pulse">
+<span class="w-2 h-2 rounded-full bg-error"></span> Monitoreo Activo
+                </div>
+</div>
+<!-- POIs -->
+<div class="glass-card p-8 rounded-2xl hover:border-primary/50 transition-all">
+<span class="material-symbols-outlined text-primary text-4xl mb-6">map</span>
+<h3 class="font-headline-md text-headline-md mb-2">Puntos de Interés</h3>
+<p class="text-secondary/60 text-sm">Diferentes modalidades de visualización de tu posición y la de los integrantes en una rodada activa.</p>
+</div>
+<!-- Album -->
+<div class="glass-card p-8 rounded-2xl md:col-span-1 md:row-span-1 hover:border-primary/50 transition-all flex flex-col justify-between">
+<div>
+<span class="material-symbols-outlined text-primary text-4xl mb-6">photo_album</span>
+<h3 class="font-headline-md text-headline-md mb-2">Recuerdos</h3>
+<p class="text-secondary/60 text-sm">Albumes de recuerdos con mucha, mucha, mucha información de una rodada. Fotografias individuales y de los integrantes de una rodada, para que vuelvas a vivir esos momentos.</p>
+</div>
+</div>
+<!-- Gamification -->
+<div class="md:col-span-2 glass-card p-8 rounded-2xl flex items-center gap-8 group hover:border-primary/50 transition-all">
+<div class="flex-1">
+<span class="material-symbols-outlined text-primary text-4xl mb-6">military_tech</span>
+<h3 class="font-headline-md text-headline-md mb-2">Gamificación</h3>
+<p class="text-secondary/60">Recorre carreteras, acumula kilómetros en tus viajes y desbloquea equipo legendario. Cada rodada suma kilómetros para desbloquear tus logros.</p>
+</div>
+<div class="flex flex-col items-center gap-2 opacity-50 group-hover:opacity-100 transition-opacity">
+<div class="w-16 h-16 rounded-full bg-surface-container border border-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-primary">stars</span>
+</div>
+<span class="font-telemetry-data text-xs">DIAMANTE</span>
+</div>
+</div>
+<!-- Offline Support -->
+<div class="glass-card p-8 rounded-2xl hover:border-primary/50 transition-all">
+<span class="material-symbols-outlined text-primary text-4xl mb-6">wifi_off</span>
+<h3 class="font-headline-md text-headline-md mb-2">Soporte Offline</h3>
+<p class="text-secondary/60 text-sm">Optimizado para funcionar incluso si tu conexión falla en esos lugares donde la señal no es muy buena.</p>
+</div>
+</div>
+</section>
+<!-- Security SOS Section -->
+<section class="py-24 bg-surface-container-lowest overflow-hidden relative" id="sos">
+<div class="absolute top-0 right-0 w-1/2 h-full opacity-10">
+
+</div>
+<div class="px-margin-desktop max-w-container-max mx-auto grid md:grid-cols-2 gap-20 items-center relative z-10">
+<div>
+<div class="flex items-center gap-4 mb-6">
+<div class="h-[1px] w-12 bg-primary"></div>
+<span class="font-label-sm text-label-sm tracking-[0.3em] uppercase text-primary">Protocolo de Seguridad</span>
+</div>
+<h2 class="font-headline-lg text-headline-lg mb-8">Seguridad sin Concesiones.</h2>
+<div class="space-y-8">
+<div class="flex gap-6">
+<div class="w-12 h-12 shrink-0 rounded-full bg-error-container/20 flex items-center justify-center border border-error/30 text-error">
+<span class="material-symbols-outlined">sensors</span>
+</div>
+<div>
+<h4 class="font-headline-md text-headline-md mb-2">Sensor de Colisión G-Force</h4>
+<p class="text-secondary/60">Algoritmo inteligente que detecta desaceleraciones bruscas e impactos, activando una cuenta regresiva de 30 segundos antes de alertar.</p>
+</div>
+</div>
+<div class="flex gap-6">
+<div class="w-12 h-12 shrink-0 rounded-full bg-primary/20 flex items-center justify-center border border-primary/30 text-primary">
+<span class="material-symbols-outlined">share_location</span>
+</div>
+<div>
+<h4 class="font-headline-md text-headline-md mb-2">Difusión en Tiempo Real</h4>
+<p class="text-secondary/60">En caso de emergencia, una alerta se envían a todos los integrantes de una rodada.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="glass-card p-12 rounded-[2rem] border-primary/20">
+<div class="text-center mb-10">
+<div class="inline-block p-4 rounded-full bg-error-container/10 border border-error mb-4">
+<span class="material-symbols-outlined text-error text-5xl">emergency_home</span>
+</div>
+<h3 class="font-headline-md text-headline-md mb-2">Simulación de Alerta</h3>
+<p class="text-secondary/50 text-sm italic">Si no cancelas en 00:08, se enviará señal SOS.</p>
+</div>
+<div class="space-y-4">
+<div class="flex justify-between items-center p-4 bg-error-container/20 border border-error/30 rounded-xl">
+<span class="font-bold">Contactando Central...</span>
+<span class="font-telemetry-data text-error">PENDIENTE</span>
+</div>
+<div class="flex justify-between items-center p-4 bg-surface-container rounded-xl">
+<span class="opacity-60">Ubicación Actual</span>
+<span class="font-telemetry-data">40.4168° N, 3.7038° W</span>
+</div>
+<button class="w-full py-4 rounded-xl border border-outline hover:bg-on-surface/5 transition-all uppercase font-bold tracking-widest mt-6">
+                        CANCELAR ALERTA
+                    </button>
+</div>
+</div>
+</div>
+</section>
+<!-- Membership Plans -->
+<section class="py-24 px-margin-desktop max-w-container-max mx-auto" id="plans">
+<div class="text-center mb-20">
+<h2 class="font-headline-lg text-headline-lg mb-4">Elige tu nivel de rodada</h2>
+<div class="inline-flex bg-surface-container p-1 rounded-full border border-outline-variant/30">
+<button class="px-6 py-2 rounded-full bg-primary text-background font-bold">Mensual</button>
+<button class="px-6 py-2 rounded-full text-secondary hover:text-on-surface transition-colors">Anual (-20%)</button>
+</div>
+</div>
+<div class="grid md:grid-cols-2 gap-gutter max-w-4xl mx-auto">
+<!-- Free Plan -->
+<div class="glass-card p-10 rounded-2xl flex flex-col">
+<div class="mb-8">
+<h3 class="font-headline-md text-headline-md mb-2">MotoGroup Free</h3>
+<div class="flex items-baseline gap-1 mb-4">
+<span class="font-headline-lg text-headline-lg">$0</span>
+<span class="text-secondary/50">/siempre</span>
+</div>
+<p class="text-secondary/60">Para rodadas casuales y grupos pequeños de hasta 3 integrantes.</p>
+</div>
+<ul class="space-y-4 mb-10 flex-grow">
+<li class="flex items-center gap-3 text-sm">
+<span class="material-symbols-outlined text-primary text-sm">check_circle</span> Tracking GPS (3 Motos)
+                    </li>
+<li class="flex items-center gap-3 text-sm">
+<span class="material-symbols-outlined text-primary text-sm">check_circle</span> Alertas SOS Manuales
+                    </li>
+<li class="flex items-center gap-3 text-sm opacity-40">
+<span class="material-symbols-outlined text-sm">cancel</span> Detección de Caída Automática
+                    </li>
+<li class="flex items-center gap-3 text-sm opacity-40">
+<span class="material-symbols-outlined text-sm">cancel</span> Telemetría Premium
+                    </li>
+</ul>
+<button class="w-full py-4 rounded-lg border border-outline hover:bg-on-surface/5 transition-all font-bold">EMPEZAR GRATIS</button>
+</div>
+<!-- Premium Plan -->
+<div class="glass-card p-10 rounded-2xl flex flex-col border-primary/50 relative overflow-hidden">
+<div class="absolute top-4 right-4 bg-primary text-background px-3 py-1 rounded-full font-bold text-[10px] tracking-widest uppercase">RECOMENDADO</div>
+<div class="mb-8">
+<h3 class="font-headline-md text-headline-md mb-2 text-primary">MotoGroup Premium</h3>
+<div class="flex items-baseline gap-1 mb-4">
+<span class="font-headline-lg text-headline-lg">$9.99</span>
+<span class="text-secondary/50">/mes</span>
+</div>
+<p class="text-secondary/60">La experiencia total de seguridad y comunidad sin límites.</p>
+</div>
+<ul class="space-y-4 mb-10 flex-grow">
+<li class="flex items-center gap-3 text-sm">
+<span class="material-symbols-outlined text-primary text-sm">check_circle</span> Tracking Ilimitado (Groups 50+)
+                    </li>
+<li class="flex items-center gap-3 text-sm">
+<span class="material-symbols-outlined text-primary text-sm">check_circle</span> SOS Automático (Crash Detect)
+                    </li>
+<li class="flex items-center gap-3 text-sm">
+<span class="material-symbols-outlined text-primary text-sm">check_circle</span> Mapas Offline de todo el mundo
+                    </li>
+<li class="flex items-center gap-3 text-sm">
+<span class="material-symbols-outlined text-primary text-sm">check_circle</span> Telemetría Avanzada (RPM/Incline)
+                    </li>
+</ul>
+<button class="w-full py-4 rounded-lg bg-primary text-background font-bold hover:shadow-[0_0_20px_rgba(249,115,22,0.4)] transition-all">UNIRSE AL CLUB</button>
+</div>
+</div>
+</section>
+<!-- Contact Form -->
+<section class="py-24 px-margin-desktop max-w-container-max mx-auto" id="support">
+<div class="glass-card rounded-[2rem] overflow-hidden flex flex-col md:flex-row">
+<div class="md:w-1/3 bg-primary p-12 flex flex-col justify-between text-background">
+<div>
+<h2 class="font-headline-lg text-headline-lg mb-6">Contacto Técnico</h2>
+<p class="font-body-md opacity-80">¿Necesitas ayuda con el registro de tu Club o tienes dudas técnicas? Nuestro equipo de ingenieros está listo.</p>
+</div>
+<div class="space-y-4 mt-12">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined">mail</span>
+<span>support@motogroup.tech</span>
+</div>
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined">forum</span>
+<span>Discord Community</span>
+</div>
+</div>
+</div>
+<div class="md:w-2/3 p-12 bg-surface-container">
+<form class="grid md:grid-cols-2 gap-6">
+<div class="col-span-1">
+<label class="block text-xs font-bold uppercase tracking-widest text-secondary/60 mb-2">Nombre</label>
+<input class="w-full bg-background border border-outline-variant/30 rounded-lg p-4 focus:border-primary focus:ring-0 transition-colors" placeholder="Tu nombre" type="text"/>
+</div>
+<div class="col-span-1">
+<label class="block text-xs font-bold uppercase tracking-widest text-secondary/60 mb-2">Email</label>
+<input class="w-full bg-background border border-outline-variant/30 rounded-lg p-4 focus:border-primary focus:ring-0 transition-colors" placeholder="email@moto.com" type="email"/>
+</div>
+<div class="col-span-2">
+<label class="block text-xs font-bold uppercase tracking-widest text-secondary/60 mb-2">Tipo de Consulta</label>
+<select class="w-full bg-background border border-outline-variant/30 rounded-lg p-4 focus:border-primary focus:ring-0 transition-colors">
+<option>Soporte Técnico</option>
+<option>Registro de Club / Grupo</option>
+<option>Ventas Premium Corporativas</option>
+<option>Reportar un fallo</option>
+</select>
+</div>
+<div class="col-span-2">
+<label class="block text-xs font-bold uppercase tracking-widest text-secondary/60 mb-2">Mensaje</label>
+<textarea class="w-full bg-background border border-outline-variant/30 rounded-lg p-4 h-32 focus:border-primary focus:ring-0 transition-colors" placeholder="Escribe tu mensaje técnico aquí..."></textarea>
+</div>
+<div class="col-span-2 text-right">
+<button class="bg-primary text-background px-10 py-4 rounded-lg font-bold hover:scale-95 transition-transform" type="submit">ENVIAR MENSAJE</button>
+</div>
+</form>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="w-full px-margin-desktop py-12 flex flex-col md:flex-row justify-between items-center gap-gutter border-t border-outline-variant/30 bg-surface">
+<div class="flex items-center gap-4">
+<img alt="MotoGroup" class="h-12 w-auto" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBnlc3LTNz5-cCbTbwdR5ZwRi54xZgoWvNcj0m7PPJEeeYsfdUw9pr8Wso_IcneS5e-hRgNV6UT0QGI1tpzlJyQ2DbGcyx2u-wwRQy7jyIzvDA9oxCHhN4qB82ME6WjmvFh3511w6ftfaW3YCYTbti_W7lUcumvmqJxAFKUcJLhH9rDoxim3wz68rjQdnBtk_mipdRhnX-WlSaXU8R-AU1PyZcPogQshQQqjY95wqVyXIOfGHwR6aIS"/>
+<div>
+<div class="font-headline-md text-headline-md text-on-surface">MotoGroup</div>
+<div class="font-label-sm text-label-sm text-secondary/50 uppercase tracking-tighter">Precision Engineered for the Road.</div>
+</div>
+</div>
+<div class="flex flex-col items-center md:items-end gap-6">
+<div class="flex gap-8">
+<a class="font-label-sm text-label-sm text-secondary hover:text-primary transition-colors" href="#">Privacy Policy</a>
+<a class="font-label-sm text-label-sm text-secondary hover:text-primary transition-colors" href="#">Terms of Service</a>
+<a class="font-label-sm text-label-sm text-secondary hover:text-primary transition-colors" href="#">Cookie Policy</a>
+<a class="font-label-sm text-label-sm text-secondary hover:text-primary transition-colors" href="#">Safety Guidelines</a>
+</div>
+<div class="flex gap-4">
+<div class="w-8 h-8 rounded-full border border-outline-variant flex items-center justify-center hover:bg-primary/10 transition-all cursor-pointer">
+<span class="material-symbols-outlined text-sm">share</span>
+</div>
+<div class="w-8 h-8 rounded-full border border-outline-variant flex items-center justify-center hover:bg-primary/10 transition-all cursor-pointer">
+<span class="material-symbols-outlined text-sm">groups</span>
+</div>
+</div>
+<p class="font-label-sm text-label-sm text-secondary/40">© 2026 MotoGroup. All rights reserved.</p>
+</div>
+</footer>
+<!-- Micro-interaction Scripts -->
+<script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Smooth reveal animation for cards
+            const observerOptions = {
+                threshold: 0.1
+            };
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('opacity-100', 'translate-y-0');
+                        entry.target.classList.remove('opacity-0', 'translate-y-10');
+                    }
+                });
+            }, observerOptions);
+
+            document.querySelectorAll('.glass-card').forEach(card => {
+                card.classList.add('opacity-0', 'translate-y-10', 'transition-all', 'duration-700');
+                observer.observe(card);
+            });
+
+            // Parallax effect on hero image
+            window.addEventListener('mousemove', (e) => {
+                const moveX = (e.clientX - window.innerWidth / 2) / 50;
+                const moveY = (e.clientY - window.innerHeight / 2) / 50;
+                const heroImg = document.querySelector('.hero-image-container');
+                if(heroImg) {
+                    heroImg.style.transform = `translate(${moveX}px, ${moveY}px)`;
+                }
+            });
+        });
+    </script>
+</body></html>
