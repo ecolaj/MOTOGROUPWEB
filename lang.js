@@ -87,6 +87,11 @@ const translations = {
     plan_period_forever: "/siempre",
     plan_period_month: "/mes",
     plan_period_year: "/año",
+    modal_ios_badge: "EN DESARROLLO",
+    modal_ios_title: "Próximamente",
+    modal_ios_subtitle: "Estamos trabajando en ello",
+    modal_ios_desc: "La versión para iOS de MotoGroup se encuentra actualmente en desarrollo para ofrecerte la mejor experiencia en tus rodadas.",
+    modal_ios_btn: "¡Entendido!",
     
     // Privacy Page
     priv_page_title: "Política de Privacidad | MotoGroup",
@@ -255,6 +260,11 @@ const translations = {
     plan_period_forever: "/forever",
     plan_period_month: "/month",
     plan_period_year: "/year",
+    modal_ios_badge: "IN DEVELOPMENT",
+    modal_ios_title: "Coming Soon",
+    modal_ios_subtitle: "We are working on it",
+    modal_ios_desc: "The iOS version of MotoGroup is currently in development to bring you the best experience on your rides.",
+    modal_ios_btn: "Got it!",
 
     // Privacy Page
     priv_page_title: "Privacy Policy | MotoGroup",
